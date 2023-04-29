@@ -212,3 +212,81 @@ table {
     font-weight: bold;
     font-size: 3rem;
   }
+
+  /* testimonials*/
+  #testimonials {
+    text-align: center;
+    display: block;
+    
+  }
+
+  /*destination  */
+  #about {
+    background-color: var(--blue);
+    display: grid; 
+  }
+
+  #about h3 {
+    grid-column: 1/-1;
+    margin: 2rem;
+    max-width: 75%;
+  }
+
+  #about div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    padding: 5rem;
+    margin: 4rem;
+  }
+  #about section {
+   width: 25%;
+  }
+
+  /* footer */
+  footer {
+    background-color: var(--light-gray);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  footer a {
+    text-decoration: none;
+    width: 30%;
+    margin: 0 auto;
+    color: var(--black);
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+/* contact us form */
+form{
+	display: block;
+	width: 75%;
+	padding: 1em;
+	margin: 0 auto;
+	font-size: 3rem;
+}
+
+input, label, fieldset{
+	display: block;
+	width: 95%;
+}
+
+.required{
+  display: inline-block;
+  color: var(--purple);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+input{
+	font-size: 1em;
+	padding: 2rem;
+	border: 5px solid var(--purple);
+	height: 1.5em;
+}
+  
+  
+   
