@@ -101,11 +101,13 @@ table {
 
   h2, h3 {
     font-size: 4rem;
-    padding-left: 3rem;
+    padding-left: 10%;
+
   }
 
   p {
-    padding: 3rem;
+    padding: 2rem;
+
      
   }
 
@@ -117,13 +119,7 @@ table {
     
   }
 
- 
- 
-  #menu-toggle{
-    background-color: var(--teal);
-    
-    
-  }
+
 
   nav{
     grid-column: 1/-1;
@@ -154,7 +150,6 @@ table {
     top:100%;
     left: 0;
     right:0;
-    border: 1px solid var(--black);
     
   }
 
@@ -187,5 +182,33 @@ table {
   .sr-only{
     display: none;
   }
+/* images */
+  #img-grid img {
+    display: grid;
+    grid-template-rows: max-content;
+    grid-row: 1;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
+/* plan your trip section */
+  #plan {
+    background-color: var(--yellow);
+  }
 
+  .plan-btn {
+    background-color: var(--teal);
+    margin: 3rem;
+    padding: 2rem;
+    border: 5px solid var(--white);
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
