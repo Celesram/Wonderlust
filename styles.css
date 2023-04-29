@@ -101,7 +101,7 @@ table {
 
   h2, h3 {
     font-size: 4rem;
-    padding-left: 10%;
+    padding: 10%;
 
   }
 
@@ -113,18 +113,16 @@ table {
 
   header {
     display: grid;
-    background-color: var(--teal);
+    background: var(--teal);
+    background: linear-gradient(180deg, var(--teal) 0%, var(--white) 100%);
     padding: 1rem;
     width: calc(100% - 2rem)
-    
+    grid-template-columns: 1fr 1fr;
   }
 
 
 
-  nav{
-    grid-column: 1/-1;
-  }
-
+  
   nav a{
     text-decoration:none;
     text-align: center;
@@ -132,8 +130,9 @@ table {
     color: var(--black);
     font-size: 1.1rem;
     font-weight: bold;
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 3rem;
+    margin: 0;
+    border: 2px solid var(--black);
     
   }
   nav li {
@@ -166,16 +165,23 @@ table {
   #toggle:checked ~ label {
     background-color: var(--black);
     color: var(--white);
+    width: calc(100% - 1rem);
+    margin: 0rem;
+    padding-top: 2rem;
+  }
+
+  #toggle {
+    display: none;
   }
 
   header label{
-    width: 2rem;
+    width: 6rem;
     margin: 2rem;
     padding: 2rem;
-    top:100%;
-    left: 0;
-    right: 0;
     background-color: var(--yellow);
+    position: absolute;
+    top: 0px;
+    right: 0;
 
   }
 
@@ -272,6 +278,7 @@ form{
 input, label, fieldset{
 	display: block;
 	width: 95%;
+  padding: 5%;
 }
 
 .required{
@@ -287,6 +294,129 @@ input{
 	border: 5px solid var(--purple);
 	height: 1.5em;
 }
+
+label{
+	padding-left: 0.5em;
+	margin: 0.75em 0 0.75em 0;
+}
+
+fieldset{
+	padding: 0.5em 0 1em 0.5em;
+	margin: 0.75em 0 0.25em 0;
+	width: 98%;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+input[type="radio" ] {
+  display: block;
+  appearance: auto;
+  box-sizing: border-box;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  padding: initial;
+}
+
+
+#prefEmail:checked {
+  color:#9B26B0;
+}
+
+select{
+  font-size: 1em;
+	padding: 0.5rem;
+	border: 5px solid var(--purple);
+	height: 3em;
+  width: calc(100%-1rem);
+  margin: 2%;
+}
+
+input[type="submit" i] {
+  color: var(--white);
+  background-color: var(--purple);
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 50%;
+}
+  
+/* meduim screen styles */
+@media screen and (min-width: 650px){
+  #img-grid img {
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+   
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #img-grid picture {
+    grid-template-columns: 2fr;
+  }
+
+  #plan div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10em;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #testimonials div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    padding: 5rem;
+    margin: 4rem;
+  }
+
+  #about{
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  }
+
+  #about div {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr 4fr;
+  }
   
   
+}
+
+@media screen and (min-width: 900px){
+/* form */
+#contact form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  #contact label,
+#contact input,
+#contact select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  margin: 1rem;
+}
+
+#testimonials div {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#about{
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  }
+
+#plan div {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+}
    
