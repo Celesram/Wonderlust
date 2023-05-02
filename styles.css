@@ -403,22 +403,6 @@ input[type="submit" i] {
 /* meduim screen styles */
 
 @media screen and (min-width: 950px){
-  #img-grid {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  #img-grid img {
-    flex-basis: calc(50% - 10px); /* Subtract 10px to account for the gap between the images */
-    margin-right: 10px; /* Add a 10px gap between the images */
-  }
-  
-  #img-grid picture {
-    flex-basis: 100%;
-    margin-top: 10px; /* Add a 10px gap between the second row and the third image */
-  }
-  
-
   #plan div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -454,9 +438,26 @@ input[type="submit" i] {
     display: none;
   }
   
+  #img-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #img-grid img {
+    flex-basis: calc(50% - 10px); /* Subtract 10px to account for the gap between the images */
+    margin-right: 10px; /* Add a 10px gap between the images */
+  }
+  
+  #img-grid picture {
+    flex-basis: 100%;
+    margin-top: 10px; /* Add a 10px gap between the second row and the third image */
+  }
+  
+
+  
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 1300px){
 /* form */
 #contact form {
     display: grid;
